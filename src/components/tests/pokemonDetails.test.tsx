@@ -3,9 +3,9 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from '../../store';
 import PokemonDetails from '../PokemonDetails';
-import { setSelectedPokemon } from '../../features/pokemonSlice';
 import { server } from '../../mocks/server';
 import { rest } from 'msw';
+import { setSelectedPokemon } from '../../store/slices/pokemonSlice';
 
 server.use(
     rest.get('https://pokeapi.co/api/v2/pokemon/:id', (req, res, ctx) => {
@@ -33,7 +33,7 @@ test('renders details of selected pokemon', async () => {
     store.dispatch(setSelectedPokemon('1'));
 
     render(
-        <Provider store={store}>
+        <Provider store={store}> 
             <PokemonDetails />
         </Provider>
     );

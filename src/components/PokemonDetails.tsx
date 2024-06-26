@@ -1,9 +1,7 @@
 import React from 'react';
 import { useAppSelector } from '../hooks';
-import { useGetPokemonDetailsQuery } from '../apis/pokemonAPI';
+import { useGetPokemonDetailsQuery } from '../services/pokemonAPI';
 import { pokemonType } from '../types';
-
-
 
 const PokemonDetails: React.FC = () => {
     const selectedPokemon = useAppSelector((state) => state.pokemon.selectedPokemon);

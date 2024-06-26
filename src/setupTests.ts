@@ -1,6 +1,9 @@
-import '@testing-library/jest-dom/extend-expect';
-import { server } from './mocks/server';
+import '@testing-library/jest-dom'
 
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
+import fetchMock from 'jest-fetch-mock';
+
+fetchMock.enableMocks();
+
+beforeEach(() => {
+  fetchMock.resetMocks();
+});

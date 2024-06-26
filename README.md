@@ -25,9 +25,13 @@ This is a simple React application to display a list of Pokemon and their detail
     ```sh
     npm run start
     ```
-2. To Run Tests use:
+3. To Run Tests use:
     ```sh
     npm run test
+    ```
+4. To Get Test coverage:
+    ```sh
+    npm test -- --coverage
     ```
 
 ### Configuration

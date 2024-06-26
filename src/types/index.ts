@@ -4,3 +4,8 @@ export type pokemonType = {
         name: string;
     }
 }
+
+export type Pokemon = {
+    name: string;
+    imageUrl: string;
+}
